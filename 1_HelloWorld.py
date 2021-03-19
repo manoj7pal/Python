@@ -7,7 +7,7 @@ num1 = 10
 num2 = 10.5
 str1 = 'Manoj Pal'
 add = """House no 100,
-     Pune, Maharastra,
+     Pune, Maharashtra,
      India"""
 can_vote = False
 
@@ -39,7 +39,7 @@ print(f"num1 != num2: {num1 != num2}")
 # If Else
 
 if num2 > num1:
-    print(f"num2 {num2} is greater thgan num1 {num1}.")
+    print(f"num2 {num2} is greater than num1 {num1}.")
 elif num1 == num2:
     print(f"num2 {num2} is equal to num1 {num1}.")
 else:
