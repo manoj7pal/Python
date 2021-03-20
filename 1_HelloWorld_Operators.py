@@ -11,6 +11,7 @@ add = """House no 100,
      India"""
 can_vote = False
 
+
 print(f"num1: {num1} and Type of num1: {type(num1)}")
 print(f"num2: {num2} and Type of num2: {type(num2)}")
 print(f"str1: {str1} and Type of str1: {type(str1)}")
