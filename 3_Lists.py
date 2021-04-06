@@ -139,4 +139,42 @@ def list_operations():
     print(f"After clearing the list: {countries}")
 
 
-list_operations()
+# list_operations()
+
+
+def func(x):
+    a = 10
+    b = 20
+    print(a, b)
+
+    c = b
+    b = a
+    a = c
+    print(a, b)
+
+
+# func(a)
+
+def index_slicing():
+    a = [1, 2, 3, 4, 5]
+
+    # Indexing
+    # print(a[6]) # Exception
+    print(f"a[0] and a[-1]: {a[0], a[-1]}")
+
+    # Slicing
+    print(a[0:106])
+    print(f"a[-4:-1]: {a[-4:-1]}")
+    print(f"3rd(step) parameter - Even Index positions a[0:4:2]: {a[0:4:2]}")
+    print(f"3rd(step) parameter - Even Index positions a[0:6:2]: {a[0:6:2]}")
+    print(f"3rd(step) parameter - Odd Index positions a[1:4:2]: {a[1:4:2]}")
+    print(f"a[:]: {a[:]}")
+    print(f"a[::]: {a[::]}")
+    print(f"a[::1]: {a[::1]}")
+    print(f"a[::2]: {a[::2]}")
+    print(f"a[::3]: {a[::3]}")
+    print(f"Reverse a list using step parameter, a[::-1]: {a[::-1]}")
+    print(f"Fetch the even positions elements from the end of the list, a[::-2]: {a[::-2]}")
+
+
+index_slicing()
