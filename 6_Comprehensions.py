@@ -33,6 +33,7 @@ def square():
 
 # square()
 
+
 def square_cube():
     squares_cubes = []
     for i in numbers:
@@ -54,9 +55,20 @@ def square_cube():
 
     num = [-1, -2, -3, -4, -5, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     print(f"Num: {num}")
-    odd_cubes_gt0 = [i**3 if i>0 else -9999 for i in num if i%2 !=0]
+    odd_cubes_gt0 = [i ** 3 if i > 0 else -9999 for i in num if i % 2 != 0]
     print(f"Odd Cube, gt 0 - List Comprehension: {odd_cubes_gt0}")
     print('--' * 40)
 
+    print('**' * 40)
+    result = []
+    for i in num:
+        if i % 2 != 0:
+            if i > 0:
+                result.append(i ** 3)
+            else:
+                result.append(-9999)
+    print(f"Result: {result}")
+    print('**' * 40)
 
-square_cube()
+# square_cube()
+
