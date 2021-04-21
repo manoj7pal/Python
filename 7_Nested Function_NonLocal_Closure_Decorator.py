@@ -151,9 +151,11 @@ def run():
 
 
 # -----------------------------------------------------------------------
-# DECORATOR: used to perform a common set of pre and post operations, before/after a function call.
-#           Achieved via Closure.
-#           Used for Logging, Auditing etc.
+"""
+ DECORATOR: used to perform a common set of pre and post operations, before/after a function call. Achieved via Closure. Used for Logging, Auditing etc.
+ 
+ A decorator takes in a function, adds some functionality and returns it. 
+"""
 # -----------------------------------------------------------------------
 
 # def decorate_result1(func):
@@ -178,22 +180,22 @@ def decorate_result(func):
     return inner
 
 
-@decorate_result
+# @decorate_result
 def add(a, b):
     print(f"a+b: {a + b}")
 
 
-@decorate_result
+# @decorate_result
 def subtract(a, b):
     print(f"a-b: {a - b}")
 
 
-@decorate_result
+# @decorate_result
 def multiply(a, b):
     print(f"a*b: {a * b}")
 
 
-@decorate_result
+# @decorate_result
 def divide(a, b):
     print(f"a/b: {a / b}")
 
@@ -205,4 +207,33 @@ def run():
     divide(10, 20)
 
 
-run()
+# run()
+# --------------------------------------
+
+def dec_results(func):
+    print(f"Inside Decorator")
+
+    def inner():
+        print("**" * 40)
+        func()
+        print("**" * 40)
+
+    return inner
+
+
+@dec_results
+@decorate_result
+def list_friends():
+    friends = {
+        'Manoj': {'Age': 29, 'City': 'Pune'},
+        'Saurav': {'Age': 28, 'City': 'Aligarh'},
+        'Kanchan': {'Age': 25, 'City': 'Pune'},
+        'Sam': {'Age': 24, 'City': 'Mumbai'},
+        'Payal': {'Age': 24, 'City': 'Raipur'}
+    }
+
+    for key, value in friends.items():
+        print(f"Friend name is {key}, Age is {value['Age']} and lives in {value['City']}")
+
+
+list_friends()
