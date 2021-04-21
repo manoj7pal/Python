@@ -178,22 +178,22 @@ def decorate_result(func):
     return inner
 
 
-@decorate_result
+# @decorate_result
 def add(a, b):
     print(f"a+b: {a + b}")
 
 
-@decorate_result
+# @decorate_result
 def subtract(a, b):
     print(f"a-b: {a - b}")
 
 
-@decorate_result
+# @decorate_result
 def multiply(a, b):
     print(f"a*b: {a * b}")
 
 
-@decorate_result
+# @decorate_result
 def divide(a, b):
     print(f"a/b: {a / b}")
 
@@ -205,4 +205,32 @@ def run():
     divide(10, 20)
 
 
-run()
+# run()
+# --------------------------------------
+
+def dec_results(func):
+    print(f"Inside Decorator")
+
+    def inner():
+        print("**" * 40)
+        func()
+        print("**" * 40)
+
+    return inner
+
+
+@dec_results
+@decorate_result
+def list_friends():
+    friends = {
+        'Manoj': {'Age': 29, 'City': 'Pune'},
+        'Sandeep': {'Age': 25, 'City': 'Delhi'},
+        'Ipsa': {'Age': 28, 'City': 'Bhilai'},
+        'Vihang': {'Age': 22, 'City': 'Mumbai'},
+    }
+
+    for key, value in friends.items():
+        print(f"Friend name is {key}, Age is {value['Age']} and lives in {value['City']}")
+
+
+list_friends()
