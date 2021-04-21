@@ -153,9 +153,11 @@ def run():
 # -----------------------------------------------------------------------
 """
  DECORATOR: used to perform a common set of pre and post operations, before/after a function call. Achieved via Closure. Used for Logging, Auditing etc.
- 
+
  A decorator takes in a function, adds some functionality and returns it. 
 """
+
+
 # -----------------------------------------------------------------------
 
 # def decorate_result1(func):
