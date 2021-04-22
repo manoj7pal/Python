@@ -152,9 +152,10 @@ def run():
 
 # -----------------------------------------------------------------------
 """
- DECORATOR: used to perform a common set of pre and post operations, before/after a function call. Achieved via Closure. Used for Logging, Auditing etc.
-
- A decorator takes in a function, adds some functionality and returns it. 
+DECORATOR: used to perform a common set of pre and post operations, before/after a function call. Achieved via Closure. 
+        Used for Logging, Auditing etc.
+        A decorator takes in a function, adds some functionality and returns it.
+        When we want to embed some extra functionality to a common function, then we can use a decorator. 
 """
 
 
@@ -202,7 +203,7 @@ def divide(a, b):
     print(f"a/b: {a / b}")
 
 
-def run():
+def run1():
     add(10, 20)
     subtract(10, 20)
     multiply(10, 20)
@@ -231,11 +232,53 @@ def list_friends():
         'Saurav': {'Age': 28, 'City': 'Aligarh'},
         'Kanchan': {'Age': 25, 'City': 'Pune'},
         'Sam': {'Age': 24, 'City': 'Mumbai'},
-        'Payal': {'Age': 24, 'City': 'Raipur'}
+        'Payal': {'Age': 22, 'City': 'Raipur'}
     }
 
     for key, value in friends.items():
         print(f"Friend name is {key}, Age is {value['Age']} and lives in {value['City']}")
 
 
-list_friends()
+# list_friends()
+# ------------------------------------
+
+def logger(func):
+    def inner(*args, **kwargs):
+        print("In Logger ---- Function Call")
+        print(f"Function {func} is called.")
+        print(f" Parameters: args =>{args}, kwargs=> {kwargs}")
+        func(*args, **kwargs)
+        print(f"Function processing finished")
+        print("--" * 40)
+
+    return inner
+
+
+@logger
+def add(a, b):
+    print(f"a+b: {a + b}")
+
+
+@logger
+def subtract(a, b):
+    print(f"a-b: {a - b}")
+
+
+@logger
+def multiply(a, b):
+    print(f"a*b: {a * b}")
+
+
+@logger
+def divide(a, b):
+    print(f"a/b: {a / b}")
+
+
+def run():
+    add(10, 20)
+    subtract(b=10, a=20)
+    multiply(10, b=20)
+    divide(10, 20)
+
+
+run()
