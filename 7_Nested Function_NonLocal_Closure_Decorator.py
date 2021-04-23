@@ -224,17 +224,18 @@ def dec_results(func):
     return inner
 
 
-@dec_results
-@decorate_result
-def list_friends():
-    friends = {
-        'Manoj': {'Age': 29, 'City': 'Pune'},
-        'Saurav': {'Age': 28, 'City': 'Aligarh'},
-        'Kanchan': {'Age': 25, 'City': 'Pune'},
-        'Sam': {'Age': 24, 'City': 'Mumbai'},
-        'Payal': {'Age': 22, 'City': 'Raipur'}
-    }
+friends = {
+    'Manoj': {'Age': 29, 'City': 'Pune'},
+    'Saurav': {'Age': 28, 'City': 'Aligarh'},
+    'Kanchan': {'Age': 25, 'City': 'Pune'},
+    'Sam': {'Age': 24, 'City': 'Mumbai'},
+    'Payal': {'Age': 22, 'City': 'Raipur'}
+}
 
+
+# @dec_results
+# @decorate_result
+def list_friends():
     for key, value in friends.items():
         print(f"Friend name is {key}, Age is {value['Age']} and lives in {value['City']}")
 
@@ -274,11 +275,57 @@ def divide(a, b):
     print(f"a/b: {a / b}")
 
 
+@logger
+def square(a=20):
+    print(f"a**2: {a ** 2}")
+
+
 def run():
     add(10, 20)
     subtract(b=10, a=20)
     multiply(10, b=20)
     divide(10, 20)
+    square(a=10)
+    square()
+
+
+# run()
+
+
+# -------------------------------------------------------------------------------
+# Parameterized Decorator
+
+def repeat(count=1):
+    def repeat_decorator(func):
+        def inner(*args, **kwargs):
+            for i in range(count):
+                func(*args, **kwargs)
+            print("--" * 20)
+
+        return inner
+
+    return repeat_decorator
+
+
+@repeat(count=3)
+def function1():
+    print("Inside function1")
+
+
+@repeat(count=5)
+def function2():
+    print("Inside function2")
+
+
+@repeat()
+def function3():
+    print("Inside function3")
+
+
+def run():
+    function1()
+    function2()
+    function3()
 
 
 run()
