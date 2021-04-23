@@ -1,0 +1,8 @@
+-----------------------------------Function Call--------------------------------------
+Function, Args, Kwargs, Result, Status
+add, (10, 20), {}, 30, Success
+subtract, (), {'b': 10, 'a': 20}, 10, Success
+multiply, (10,), {'b': 20}, 200, Success
+divide, (10, 20), {}, 0.5, Success
+square, (), {'a': 10}, 100, Success
+square, (), {}, 400, Success
