@@ -56,4 +56,4 @@ def run():
     safrin.print_info()
 
 
-run()
+# run()
