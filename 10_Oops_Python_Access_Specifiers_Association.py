@@ -194,4 +194,48 @@ def run():
     safrin_native.print_info()
 
 
+# run()
+
+# e.g: Company has many employees
+
+class Company:
+    def __init__(self, name, city, state, country='India'):
+        self.__name = name
+        self.__address = Address(city, state, country)
+        self.__employees = []
+
+    def add_employee(self, emp_id, emp_name, city, state, country):
+        self.__employees.append(Employee(emp_id, emp_name, city, state, country))
+
+    def print_info(self):
+        print(f"Company Name: {self.__name}")
+        self.__address.print_info()
+        print("List of Employees:")
+        print("--" * 40)
+
+        for employee in self.__employees:
+            employee.print_employees()
+
+
+class Employee:
+    def __init__(self, id, name, city, state, country='India'):
+        self.__id = id
+        self.__name = name
+        self.__address = Address(city, state, country)
+
+    def print_employees(self):
+        print(f"Emp ID: {self.__id}")
+        print(f"Employee Name: {self.__name}")
+        self.__address.print_info()
+
+
+def run():
+    company1 = Company('UBS', 'Pune', 'MH', 'India')
+    company1.add_employee(1, 'Manoj Pal', "Mumbai", 'MH', 'India')
+    company1.add_employee(2, 'Safrin Patil', "Wai", 'MH', 'India')
+    company1.add_employee(3, 'Esha Pal', "Pune", 'MH', 'India')
+
+    company1.print_info()
+
+
 run()
