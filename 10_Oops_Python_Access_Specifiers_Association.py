@@ -139,7 +139,7 @@ Association:
     3. 2 Types: 
         a. Aggregation: Weak Relationship, Independent entities involved
             e.g: Organization has-a Employee => In this case, a organization can exist without one employee.
-        b. Composition: Strong Relationship, Dependent entities involved.
+        b. Composition: Strong Relationship, Dependent entities involved, can also be used for COMPOSED_OF relationship.
             e.g: Humans has-a brain/heart etc.
 
 """
