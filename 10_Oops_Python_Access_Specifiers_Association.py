@@ -67,7 +67,7 @@ Method Types:
     2. Mutator(Setter)
     3. Inspector(Getter)
     4. Facilitator
-    5. De-initializer
+    5. De-initializer: This method gets called automatically. In order to call this explicitly use 'del <object_name>'. e.g: del <object_name>
 """
 
 
@@ -127,4 +127,71 @@ def run():
     print(f"Age: {safrin.get_age()}")
     print(f"City: {safrin.get_city()}")
 
+
 # run()
+
+# ----------------------------------------------------------------------
+
+"""
+Association: 
+    1. One of the ways to make your Code Modular(Reusable.), othger one is Inheritance.
+    2. has-a relationship. e.g: Person has-a Address, House has-a Address, Humans has-a heart, Animals has-a heart etc.
+    3. 2 Types: 
+        a. Aggregation: Weak Relationship, Independent entities involved
+            e.g: Organization has-a Employee => In this case, a organization can exist without one employee.
+        b. Composition: Strong Relationship, Dependent entities involved.
+            e.g: Humans has-a brain/heart etc.
+
+"""
+
+
+class Address:
+    def __init__(self, city, state, country):
+        self.__city = city
+        self.__state = state
+        self.__country = country
+
+    def print_info(self):
+        print(f"City: {self.__city}")
+        print(f"State: {self.__state}")
+        print(f"Country: {self.__country}")
+        print("--" * 40)
+
+
+class Person:
+    def __init__(self, name, city, state, country):
+        self.__name = name
+        self.__address = Address(city, state, country)
+
+    def print_info(self):
+        print('Person Information: ')
+        print(f"Name: {self.__name}")
+        self.__address.print_info()
+
+    def __del__(self):
+        del self.__address
+
+
+class House:
+    def __init__(self, name, city, state, country):
+        self.__name = name
+        self.__address = Address(city, state, country)
+
+    def print_info(self):
+        print('House Information: ')
+        print(f"Name: {self.__name}")
+        self.__address.print_info()
+
+    def __del__(self):
+        del self.__address
+
+
+def run():
+    safrin = Person('Safrin Patil', 'Pune', 'MH', 'India')
+    safrin_native = House('Harihareshwar Complex', 'Wai', 'MH', 'India')
+
+    safrin.print_info()
+    safrin_native.print_info()
+
+
+run()
