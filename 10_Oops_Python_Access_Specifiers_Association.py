@@ -134,7 +134,7 @@ def run():
 
 """
 Association: 
-    1. One of the ways to make your Code Modular(Reusable.), othger one is Inheritance.
+    1. One of the ways to make your Code Modular(Reusable.), other one is Inheritance.
     2. has-a relationship. e.g: Person has-a Address, House has-a Address, Humans has-a heart, Animals has-a heart etc.
     3. 2 Types: 
         a. Aggregation: Weak Relationship, Independent entities involved
