@@ -87,11 +87,15 @@ class Employee(Person):
         print(f"Emp ID: {self.empid}")
         Person.print_info(self)
         print(f"Email: {self.email}")
+        print('--' * 40)
 
 
 def run():
-    e = Employee(1, 'Manoj Pal', 29, 'manojpal@tsys.com', 'Pune', "Maharashtra")
-    e.print_info()
+    manoj = Employee(1, 'Manoj Pal', 29, 'manojpal@tsys.com', 'Pune', "Maharashtra")
+    manoj.print_info()
+
+    safa = Employee(2, 'Safrin Patil', 29, 'safrinpatil@gmail.com', 'Pune', 'Maharashtra')
+    safa.print_info()
 
 
 run()
