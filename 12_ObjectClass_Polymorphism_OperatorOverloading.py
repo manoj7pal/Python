@@ -194,6 +194,12 @@ class Number:
     def __eq__(self, other):
         return self.__value == other.__value
 
+    def __add__(self, other):
+        return Number(self.__value + other.__value)
+
+    def __str__(self):
+        return str(self.__value)
+
 
 def run():
     num1 = 10
@@ -210,6 +216,8 @@ def run():
     print(f"num1 == num2: {num1 == num2}")
     print(f"num1.__eq__(num2): {num1.__eq__(num2)}")
 
+    print(f"num1 + num2: {num1 + num2}")
+
     print('--' * 40)
 
     person1 = Person('Manoj', 29)
@@ -222,4 +230,4 @@ def run():
 
     print(f"person1 > person3: {person1 > person3}")
 
-# run
+run()
