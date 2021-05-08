@@ -70,5 +70,21 @@ def square_cube():
     print(f"Result: {result}")
     print('**' * 40)
 
+
 # square_cube()
 
+# -----------------------------------------------------------
+# Dictionary Comprehensions
+# -----------------------------------------------------------
+
+def func1():
+    num_sq = {num: num ** 2 for num in range(11) if num > 0}
+    even_sq = {num: num ** 2 for num in range(11) if num % 2 == 0 and num > 0}
+    odd_sq = {num: num ** 2 for num in range(11) if num % 2 != 0}
+
+    print(f"num_sq: {num_sq}, and type of num_sq = {type(num_sq)}")
+    print(f"even_sq: {even_sq}, and type of even_sq = {type(even_sq)}")
+    print(f"odd_sq: {odd_sq}, and type of odd_sq = {type(odd_sq)}")
+
+
+func1()
