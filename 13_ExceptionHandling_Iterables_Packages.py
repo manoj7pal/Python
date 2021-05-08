@@ -60,10 +60,115 @@ def run():
     print(esha)
 
 
-run()
+# run()
 
 # ------------------------------------------------------------------
+"""
+Iterables:
+"""
+
+
+def run():
+    a = [10, 20, 30, 40, 50]
+    iterator = iter(a)
+    print(f"Iterator: {iterator}, type of Iterator: {type(iterator)}")
+
+    try:
+        while True:
+            print(next(iterator))
+    except StopIteration as e:
+        print(f"End of the List Iterable object: {e}")
+
+
+# run()
 # ------------------------------------------------------------------
+""" 
+User Defined Iterable Object: 
+    - To make any object an Iterable object, the class must implement __iter__() and __next__() method
+    - __iter__() --> returns an Iterable object
+    - __next__() --> returns the next value in the iterable object.
+    
+    In this example, we will make the School Class an iterable class.
+"""
+
+
 # ------------------------------------------------------------------
+class Student:
+    def __init__(self, name, rollno):
+        self._name = name
+        self._rollno = rollno
+
+    def __str__(self):
+        return f"Student Name: {self._name}\nStudent RollNo: {self._rollno}\n{('--' * 40)}"
+
+
+class School:
+    def __init__(self, schoolname, city):
+        self.__schoolname = schoolname
+        self.__city = city
+        self.__students = []
+
+    def add_student(self, name, rollno):
+        self.__students.append(Student(name, rollno))
+
+    def __iter__(self):
+        self.__index = 0
+        return self
+
+    def __next__(self):
+        student = self.__students[self.__index]
+        self.__index += 1
+        return student
+
+    def __str__(self):
+        print(f"School Name: {self.__schoolname}")
+        print(f"City: {self.__city}")
+        print('--' * 40)
+        print("Students Information")
+        print('--' * 40)
+
+        iterator = iter(self.__students)
+        try:
+            while True:
+                print(next(iterator))
+        except StopIteration:
+            pass
+        finally:
+            print('Please contact for admission purpose!!!')
+            print('--' * 40)
+
+
+def run():
+    school = School("St. Anthony's High School", 'Mumbai')
+    school.add_student('Manoj Pal', 1)
+    school.add_student('Safrin Patil', 2)
+    school.add_student('Esha Pal', 3)
+
+    try:
+        print(school)
+    except:
+        pass
+
+
+# run()
+
+# ------------------------------------------------------------------
+# Else with FOR Loop:
+
+def is_prime(value):
+    for i in range(2, value):
+        if value % i == 0:
+            print(f"{value} is NOT a Prime number")
+            break
+    else:
+        print(f"{value} is a Prime number")
+
+
+def run():
+    is_prime(10)
+    is_prime(13)
+
+
+# run()
 # ------------------------------------------------------------------
 # ------------------------------------------------------------------
