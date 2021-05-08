@@ -169,14 +169,15 @@ def run3():
 
 We have to explicitly implement/override above methods like __eq__(), as it is not part of the reference/non-primitve type, else it says 'NotImplemented' when called.
 This method is called implicitly when we use the above operators.
-
+Also, there is no need to explicitly implement Complementary Operators(== and !=, monly one is enough), python takes acare of the another operation.
 """
 
 
 # --------------------------------------------------------------------------
 
-class Person:
+class Person(object):
     def __init__(self, name, age):
+        # object.__init__(self)
         self._name = name
         self._age = age
 
@@ -229,5 +230,6 @@ def run():
     print(f"person1.__eq__(person2): {person1.__eq__(person2)}")
 
     print(f"person1 > person3: {person1 > person3}")
+
 
 run()
