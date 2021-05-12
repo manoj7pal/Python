@@ -171,4 +171,99 @@ def run():
 
 # run()
 # ------------------------------------------------------------------
+"""
+Generators: 
+    - A generator is an object which does not store the actual values upon its creations.
+    - Instead, the object can be iterated over and the value can be fetched as and when required.
+    - Created similarly like List comprehensions, but uses '()' instead of '[]'.
+    - A generator is an example of LAZY EVALUATION, as the evaluation of the expression is delayed until its value is required.
+    - Similarly like Oracle Views.
+    - Helpful while dealing with Large Datasets, as the values are not loaded in the RAM until it is referenced.
+    - A GENERATOR FUNCTION is used to create a generator object. 
+        a. This function 'YIELDS' a sequence of the values in the form of generator object, instead of returning any value.
+        b. The returned object can be iterated over, similarly as an iterator object. 
+    - A generator maintains the context/state of the last fetched value, and iterates further as and when called.
+    
+    - A generator object can be created using 2 ways:
+        1. Using Generator Expression
+        2. Generator Function 
+"""
+
+
 # ------------------------------------------------------------------
+# Common block for iterating generator object
+def iterate_over_gen_object(gen_obj):
+    try:
+        for i in range(5):  # First 5 values
+            print(next(gen_obj))
+    except StopIteration:
+        pass
+
+    print('--' * 30)
+    print('Rest of values will be printed by FOR loop')
+    print('--' * 30)
+
+    for item in gen_obj:
+        print(item)
+
+    print('--' * 30)
+
+
+# 1. Generator Expression
+def run(num):
+    result = (i for i in range(num) if i % 2 == 0 and i > 0)
+    print('Generator Expression Example')
+    print('--' * 30)
+    print(f"result = {result}, type of result = {type(result)}")
+
+    iterate_over_gen_object(result)
+
+
+# run(20)
+
+
+# --------------------------------------------------
+
+# 2. Generator Function - YIELD a sequence of value
+def num_sequence(num):
+    i = 0
+    while i < num:
+        yield i
+        i += 1
+
+
+def run():
+    result = num_sequence(20)
+    print('Generator Function Example')
+    print('--' * 30)
+    print(f"result = {result}, type of result = {type(result)}")
+
+    iterate_over_gen_object(result)
+
+
+# run()
+
+# ------------------------------------------------------------------
+
+# Python Generators for Streaming Data:
+# Dataset: https://assets.datacamp.com/production/repositories/464/datasets/2175fef4b3691db03449bbc7ddffb740319c1131/world_ind_pop_data.csv
+# Pandas read_csv functions - chunksize - acts like a generator which pumps out dat chunks of specified size.
+
+from pandas import read_csv
+
+
+def load_dataset():
+    # world_bank = read_csv(
+    #     'https://assets.datacamp.com/production/repositories/464/datasets/2175fef4b3691db03449bbc7ddffb740319c1131/world_ind_pop_data.csv')
+    # print(world_bank.info())
+    # print(world_bank.isna().sum())
+    # print(world_bank.head())
+
+    for chunks in read_csv(
+            'https://assets.datacamp.com/production/repositories/464/datasets/2175fef4b3691db03449bbc7ddffb740319c1131/world_ind_pop_data.csv',
+            chunksize=1000):
+        print(chunks)
+
+
+# load_dataset()
+
