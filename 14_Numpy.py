@@ -133,4 +133,34 @@ def run5():
     print(f"Sorted Emp Salary: {np.sort(emp_salary)}")
 
 
-run5()
+# run5()
+
+
+# -------------------------------------------------------------------
+
+import pandas as pd
+import numpy as np
+
+
+def load_dataset(
+        url="https://assets.datacamp.com/production/repositories/288/datasets/026a5211b906ac118a09b1a0dbf7df48faafb379/fifa.csv"):
+    fifa = pd.read_csv(url)
+    return fifa[' position'].values, fifa[' height'].values
+
+
+def run():
+    np_position, np_height = load_dataset()
+    # print(np.unique(np_position))
+
+    # Compare Median heights of Goal Keeper and Other position players
+
+    gk_heights = np_height[np_position == ' GK']
+    other_heights = np_height[np_position != ' GK']
+
+    print(f"Median height of Goalkeepers: {np.median(gk_heights)}")
+    print(f"Median height of Other players: {np.median(other_heights)}")
+
+    print("Median height of goalkeepers is greater than median height of other players.")
+
+
+run()
