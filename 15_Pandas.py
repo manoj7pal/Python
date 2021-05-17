@@ -88,4 +88,9 @@ def run():
     print(f"")
 
 
-run()
+# run()
+
+
+from dataset import dataset
+
+dataset.list_datasets()
