@@ -19,3 +19,8 @@ def get_url(dataset_name):
     datasets = pd.read_csv(url_file, names=['name', 'url'])
     dataset_url = datasets[datasets.name == dataset_name].url.values[0].strip()
     return dataset_url
+
+
+def load_dataset(dataset_name):
+    df = pd.read_csv(get_url(dataset_name), index_col=0)
+    return df
