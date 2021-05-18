@@ -163,12 +163,26 @@ def run():
     print(cars)
     print('--' * 30)
 
+    # Code for loop that adds COUNTRY column
+    print('More examples of Bad code writing:')
+    print('--' * 30)
+    for lab, row in cars.iterrows():
+        cars.loc[lab, 'COUNTRY'] = cars.loc[lab, 'country'].upper()
+
+    # Print cars
+    print(cars)
+    print('--' * 30)
+
     # BETTER WAY TO DO ABOVE OPERATION
+    print('BETTER WAY TO DO ABOVE OPERATIONS - without loops')
+    print('--' * 30)
     cars['country_CHARS'] = cars['country'].apply(len)
+    cars['COUNTRY'] = cars['country'].apply(str.upper)
     print(cars)
 
     del (cars['country_chars'])
     del (cars['country_CHARS'])
+    del (cars['COUNTRY'])
     print(cars)
 
 
