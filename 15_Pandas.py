@@ -1,15 +1,11 @@
 # PANDAS
+import numpy as np
 import pandas as pd
 from dataset import dataset
 
 
 # dataset.list_datasets()
 # print('--' * 40)
-
-
-def load_dataset():
-    brics = pd.read_csv(dataset.get_url('brics'), index_col=0)
-    return brics
 
 
 def access_square(brics):
@@ -78,7 +74,7 @@ def access_iloc(brics):
 
 
 def run():
-    brics = load_dataset()
+    brics = dataset.load_dataset('brics')
     print(brics)
 
     # access_square(brics)
@@ -90,7 +86,90 @@ def run():
 
 # run()
 
+# Filtering Pandas DataFrame
+def run():
+    # cars = pd.read_csv(dataset.get_url('cars'), index_col=0)
+    cars = dataset.load_dataset('cars')
+    # print(cars.head())
 
-from dataset import dataset
+    # 1. right hand drive countries
+    dr = cars['drives_right'] == True
 
-dataset.list_datasets()
+    print(f"Below are the countries, which follow Right-Hand drive:\n{('--' * 30)}")
+    print(cars[dr])
+    print('--' * 30)
+
+    # 2. Left Hand Drive and Cars_per_cap below 100
+    print('Left Hand Drive and Cars_per_cap below 100:')
+    print('--' * 30)
+    # dl = cars['drives_right'] == False
+    # cpc_lt_100 = cars['cars_per_cap'] < 100
+    # result = cars[ np.logical_and(dl, cpc_lt_100) ]
+    result = cars[np.logical_and(np.logical_not(cars.drives_right),
+                                 cars.cars_per_cap < 100)]  # np.logical_not(cars.drives_right) OR cars.drives_right == False
+    print(result)
+
+    print('--' * 30)
+
+    # 3. Car Maniacs : cpc > 500
+    print('Car Maniacs: cpc > 500')
+    print('--' * 30)
+    print(cars[cars.cars_per_cap > 500])
+    print('--' * 30)
+
+    # 4. Cars with medium cars_per_cap i.e between 100 and 500
+    print('Cars with medium: cpc between 100 and 500')
+    print('--' * 30)
+    medium = cars[np.logical_and(cars.cars_per_cap >= 100, cars.cars_per_cap <= 500)]
+    print(medium)
+
+    print('--' * 30)
+
+    # 4. Only US
+    print(cars.loc[['US'], :])  # Best Way
+    print('OR')
+    print(cars.iloc[[0], :])
+    print('OR')
+    print(cars[0:1])
+    print('--' * 30)
+
+    print(cars.loc[['US', 'IN'], :])
+
+
+# run()
+
+# Iterating over the Dataframes -
+
+
+def run():
+    # cars = pd.read_csv(dataset.get_url('cars'), index_col=0)
+    cars = dataset.load_dataset('cars')
+
+    # for lab, row in cars.iterrows():
+    #     print(lab)
+    #     print(row)
+
+    # Country: Cars_per_Cap
+    for lab, row in cars.iterrows():
+        print(f"{lab}: {row['cars_per_cap']}")
+
+    print('--' * 30)
+
+    # Add a new column to see the length of the country characters
+    print('Add a new column to see the length of the country characters')
+    print('--' * 30)
+    for lab, row in cars.iterrows():
+        cars.loc[[lab], ['country_chars']] = len(row['country'])
+    print(cars)
+    print('--' * 30)
+
+    # BETTER WAY TO DO ABOVE OPERATION
+    cars['country_CHARS'] = cars['country'].apply(len)
+    print(cars)
+
+    del (cars['country_chars'])
+    del (cars['country_CHARS'])
+    print(cars)
+
+
+run()
