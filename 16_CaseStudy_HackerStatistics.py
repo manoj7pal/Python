@@ -56,7 +56,7 @@ def random_step(random_walk):
 
     if dice <= 2:
         step = max(0, step - 1)  # used MAX to avoid negative value, as we cannot go further down than 0th stair
-    elif dice > 2 and dice < 6:
+    elif dice > 2 and dice < 6:  # OR 2 < dice < 6
         step += 1
     else:
         step += roll_dice()
