@@ -118,6 +118,7 @@ def visualize_all_walks(all_walks):
 
 def run():
     np.random.seed(123)
+    
     all_walk_values = all_walks()
     visualize_all_walks(all_walk_values)
 
