@@ -68,21 +68,26 @@ def random_step(random_walk):
     return step
 
 
+def random_walk():
+    random_walk = [0]
+
+    # A random walk consist of many random steps , in this case its 100
+    for i in range(100):
+        step = random_step(random_walk)
+        random_walk.append(step)
+        # plt.plot(random_walk)
+        # plt.show()
+
+    return random_walk
+
+
 def all_walks():
     all_walks = []
 
     # 500 Random Walks
     for j in range(500):
-        random_walk = [0]
-
-        # A random walk consist of many random steps , in this case its 100
-        for i in range(100):
-            step = random_step(random_walk)
-            random_walk.append(step)
-            # plt.plot(random_walk)
-            # plt.show()
-
-        all_walks.append(random_walk)
+        r_walk = random_walk()
+        all_walks.append(r_walk)
 
     return all_walks
 
