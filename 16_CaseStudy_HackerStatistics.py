@@ -71,6 +71,7 @@ def random_step(random_walk):
 def all_walks():
     all_walks = []
 
+    # 500 Random Walks
     for j in range(500):
         random_walk = [0]
 
@@ -118,7 +119,7 @@ def visualize_all_walks(all_walks):
 
 def run():
     np.random.seed(123)
-    
+
     all_walk_values = all_walks()
     visualize_all_walks(all_walk_values)
 
