@@ -4,3 +4,12 @@ brics, https://assets.datacamp.com/production/repositories/287/datasets/b60fb5bd
 fifa, https://assets.datacamp.com/production/repositories/288/datasets/026a5211b906ac118a09b1a0dbf7df48faafb379/fifa.csv
 cars, https://assets.datacamp.com/production/repositories/287/datasets/79b3c22c47a2f45a800c62cae39035ff2ea4e609/cars.csv
 gapminder, https://assets.datacamp.com/production/repositories/287/datasets/5b1e4356f9fa5b5ce32e9bd2b75c777284819cca/gapminder.csv
+mnist, https://assets.datacamp.com/production/repositories/487/datasets/d6d1b84ef06151ff913b4173e2eca8e6d5fa959b/mnist_kaggle_some_rows.csv
+titanic, https://assets.datacamp.com/production/repositories/487/datasets/be79810c4288801167cfb31dbedd396559816ade/titanic_sub.csv
+seaslug, https://assets.datacamp.com/production/repositories/487/datasets/07cd090cb965782011a76af72c16b400a5ca5cc0/seaslug.txt
+sales_sas7bdat, https://assets.datacamp.com/production/repositories/487/datasets/0300d44b3ac77accc4b9706af86e33037bda6861/sales.sas7bdat
+gene_matlab, https://assets.datacamp.com/production/repositories/487/datasets/2fc0beea2d8cc7c93d79e79344a6e9e66f65d1fe/ja_data2.mat
+disease_dta, https://assets.datacamp.com/production/repositories/487/datasets/c4129edae533cf2683d8995f6dcdbcf5f41520ba/disarea.dta
+battledeath_xlsx, https://assets.datacamp.com/production/repositories/487/datasets/5e8897e4624f8577ed0d33aeafbe7bd88bfc424b/battledeath.xlsx
+ligo_hdf5, https://assets.datacamp.com/production/repositories/487/datasets/ab9107b749b832daada36bfaa718d9a591a0d69c/L-L1_LOSC_4_V1-1126259446-32.hdf5
+chinook_sqlite, https://assets.datacamp.com/production/repositories/487/datasets/ec8aa8bc9ffea6b4e2729e1a0a2d4aea2f300b3a/Chinook.sqlite
