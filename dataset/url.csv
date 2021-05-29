@@ -13,3 +13,8 @@ disease_dta, https://assets.datacamp.com/production/repositories/487/datasets/c4
 battledeath_xlsx, https://assets.datacamp.com/production/repositories/487/datasets/5e8897e4624f8577ed0d33aeafbe7bd88bfc424b/battledeath.xlsx
 ligo_hdf5, https://assets.datacamp.com/production/repositories/487/datasets/ab9107b749b832daada36bfaa718d9a591a0d69c/L-L1_LOSC_4_V1-1126259446-32.hdf5
 chinook_sqlite, https://assets.datacamp.com/production/repositories/487/datasets/ec8aa8bc9ffea6b4e2729e1a0a2d4aea2f300b3a/Chinook.sqlite
+ridesharing_csv, https://assets.datacamp.com/production/repositories/5737/datasets/023d88638863562a427a87539e371d9f2a7190f3/ride_sharing_new.csv
+airlines_csv, https://assets.datacamp.com/production/repositories/5737/datasets/ba95dfa6d750e4bf2ddda2349cfe0af80ab765ff/airlines_final.csv
+banking_dirty_csv, https://assets.datacamp.com/production/repositories/5737/datasets/1dad1a5b295d27a02615c633449edd2c907fed5d/banking_dirty.csv
+restaurant_csv, https://assets.datacamp.com/production/repositories/5737/datasets/e993edc10bc1f1ae458a560a9c41617bc2e259ae/restaurants_L2.csv
+restaurant_dirty_csv, https://assets.datacamp.com/production/repositories/5737/datasets/b2d11cce6759875e60d27b5a7062747b7ada77d0/restaurants_L2_dirty.csv
