@@ -54,9 +54,11 @@ def treat_duplicates(pot_matches, restaurants_dirty):
 # Step4.1
 def verify_duplicates(dup_rows, restaurants, restaurants_dirty):
     # Verify the Duplicate rows/matches - Print Duplicate rows
-    print(dup_rows)
-    print(restaurants[restaurants.index.isin(dup_rows.index.get_level_values(0))][['name', 'phone']])
-    print(restaurants_dirty[restaurants_dirty.index.isin(dup_rows.index.get_level_values(1))][['name', 'phone']])
+    orig_dup_rows_index = dup_rows.index.get_level_values(0)
+    dirty_dup_rows_index = dup_rows.index.get_level_values(1)
+
+    print(restaurants[restaurants.index.isin(orig_dup_rows_index)][['name']])
+    print(restaurants_dirty[restaurants_dirty.index.isin(dirty_dup_rows_index)][['name']])
 
 
 # Step5

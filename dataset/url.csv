@@ -1,20 +1,39 @@
-world_bank_dataset, https://assets.datacamp.com/production/repositories/464/datasets/2175fef4b3691db03449bbc7ddffb740319c1131/world_ind_pop_data.csv
-tweets, https://assets.datacamp.com/production/repositories/464/datasets/82e9842c09ad135584521e293091c2327251121d/tweets.csv
-brics, https://assets.datacamp.com/production/repositories/287/datasets/b60fb5bdbeb4e4ab0545c485d351e6ff5428a155/brics.csv
-fifa, https://assets.datacamp.com/production/repositories/288/datasets/026a5211b906ac118a09b1a0dbf7df48faafb379/fifa.csv
-cars, https://assets.datacamp.com/production/repositories/287/datasets/79b3c22c47a2f45a800c62cae39035ff2ea4e609/cars.csv
-gapminder, https://assets.datacamp.com/production/repositories/287/datasets/5b1e4356f9fa5b5ce32e9bd2b75c777284819cca/gapminder.csv
-mnist, https://assets.datacamp.com/production/repositories/487/datasets/d6d1b84ef06151ff913b4173e2eca8e6d5fa959b/mnist_kaggle_some_rows.csv
-titanic, https://assets.datacamp.com/production/repositories/487/datasets/be79810c4288801167cfb31dbedd396559816ade/titanic_sub.csv
-seaslug, https://assets.datacamp.com/production/repositories/487/datasets/07cd090cb965782011a76af72c16b400a5ca5cc0/seaslug.txt
-sales_sas7bdat, https://assets.datacamp.com/production/repositories/487/datasets/0300d44b3ac77accc4b9706af86e33037bda6861/sales.sas7bdat
-gene_matlab, https://assets.datacamp.com/production/repositories/487/datasets/2fc0beea2d8cc7c93d79e79344a6e9e66f65d1fe/ja_data2.mat
-disease_dta, https://assets.datacamp.com/production/repositories/487/datasets/c4129edae533cf2683d8995f6dcdbcf5f41520ba/disarea.dta
-battledeath_xlsx, https://assets.datacamp.com/production/repositories/487/datasets/5e8897e4624f8577ed0d33aeafbe7bd88bfc424b/battledeath.xlsx
-ligo_hdf5, https://assets.datacamp.com/production/repositories/487/datasets/ab9107b749b832daada36bfaa718d9a591a0d69c/L-L1_LOSC_4_V1-1126259446-32.hdf5
-chinook_sqlite, https://assets.datacamp.com/production/repositories/487/datasets/ec8aa8bc9ffea6b4e2729e1a0a2d4aea2f300b3a/Chinook.sqlite
-ridesharing_csv, https://assets.datacamp.com/production/repositories/5737/datasets/023d88638863562a427a87539e371d9f2a7190f3/ride_sharing_new.csv
-airlines_csv, https://assets.datacamp.com/production/repositories/5737/datasets/ba95dfa6d750e4bf2ddda2349cfe0af80ab765ff/airlines_final.csv
-banking_dirty_csv, https://assets.datacamp.com/production/repositories/5737/datasets/1dad1a5b295d27a02615c633449edd2c907fed5d/banking_dirty.csv
-restaurant_csv, https://assets.datacamp.com/production/repositories/5737/datasets/e993edc10bc1f1ae458a560a9c41617bc2e259ae/restaurants_L2.csv
-restaurant_dirty_csv, https://assets.datacamp.com/production/repositories/5737/datasets/b2d11cce6759875e60d27b5a7062747b7ada77d0/restaurants_L2_dirty.csv
+airlines_csv,https://assets.datacamp.com/production/repositories/5737/datasets/ba95dfa6d750e4bf2ddda2349cfe0af80ab765ff/airlines_final.csv
+avocado_prices_pkl,https://assets.datacamp.com/production/repositories/5386/datasets/5528f46cc712c9083a6881f787fc9b34ab53d5ea/avoplotto.pkl
+banking_dirty_csv,https://assets.datacamp.com/production/repositories/5737/datasets/1dad1a5b295d27a02615c633449edd2c907fed5d/banking_dirty.csv
+battledeath_xlsx,https://assets.datacamp.com/production/repositories/487/datasets/5e8897e4624f8577ed0d33aeafbe7bd88bfc424b/battledeath.xlsx
+brics,https://assets.datacamp.com/production/repositories/287/datasets/b60fb5bdbeb4e4ab0545c485d351e6ff5428a155/brics.csv
+cars,https://assets.datacamp.com/production/repositories/287/datasets/79b3c22c47a2f45a800c62cae39035ff2ea4e609/cars.csv
+chicago_business_licenses_p,https://assets.datacamp.com/production/repositories/5486/datasets/2a4d8e5d91f6f2b41477fa6ea81da91e4f09305e/licenses.p
+chicago_business_owners_p,https://assets.datacamp.com/production/repositories/5486/datasets/fc3c75b236ed090f487b044603c0f7ff6825d911/business_owners.p
+chicago_census_p,https://assets.datacamp.com/production/repositories/5486/datasets/c778c41d8b2f0d4cc6c842e95e0c650c7156c82c/census.p
+chicago_demographics_by_zipcode_p,https://assets.datacamp.com/production/repositories/5486/datasets/293c2b89092f6bcdb97d4d9e971c08183f09c30b/zip_demo.p
+chicago_land_use_p,https://assets.datacamp.com/production/repositories/5486/datasets/d9c181b64947bf60ddd9770bad424db3717272e9/land_use.p
+chicago_taxi_owners_p,https://assets.datacamp.com/production/repositories/5486/datasets/553cc8938e07068079df6215e5fcc8dbcd97b5ee/taxi_owners.p
+chicago_taxi_vehicles_p,https://assets.datacamp.com/production/repositories/5486/datasets/fe902298c39602e2ed571c23351571c779838858/taxi_vehicles.p
+chicago_wards_p,https://assets.datacamp.com/production/repositories/5486/datasets/87c16fd85c435ea10221932ebab27ffb6b232c74/ward.p
+chinook_sqlite,https://assets.datacamp.com/production/repositories/487/datasets/ec8aa8bc9ffea6b4e2729e1a0a2d4aea2f300b3a/Chinook.sqlite
+disease_dta,https://assets.datacamp.com/production/repositories/487/datasets/c4129edae533cf2683d8995f6dcdbcf5f41520ba/disarea.dta
+fifa,https://assets.datacamp.com/production/repositories/288/datasets/026a5211b906ac118a09b1a0dbf7df48faafb379/fifa.csv
+gapminder,https://assets.datacamp.com/production/repositories/287/datasets/5b1e4356f9fa5b5ce32e9bd2b75c777284819cca/gapminder.csv
+gene_matlab,https://assets.datacamp.com/production/repositories/487/datasets/2fc0beea2d8cc7c93d79e79344a6e9e66f65d1fe/ja_data2.mat
+homelessness_csv,https://assets.datacamp.com/production/repositories/5386/datasets/1a0ab2e8557930ec06473c16521874e516a216ae/homelessness.csv
+ligo_hdf5,https://assets.datacamp.com/production/repositories/487/datasets/ab9107b749b832daada36bfaa718d9a591a0d69c/L-L1_LOSC_4_V1-1126259446-32.hdf5
+mnist,https://assets.datacamp.com/production/repositories/487/datasets/d6d1b84ef06151ff913b4173e2eca8e6d5fa959b/mnist_kaggle_some_rows.csv
+restaurant_csv,https://assets.datacamp.com/production/repositories/5737/datasets/e993edc10bc1f1ae458a560a9c41617bc2e259ae/restaurants_L2.csv
+restaurant_dirty_csv,https://assets.datacamp.com/production/repositories/5737/datasets/b2d11cce6759875e60d27b5a7062747b7ada77d0/restaurants_L2_dirty.csv
+ridesharing_csv,https://assets.datacamp.com/production/repositories/5737/datasets/023d88638863562a427a87539e371d9f2a7190f3/ride_sharing_new.csv
+sales_sas7bdat,https://assets.datacamp.com/production/repositories/487/datasets/0300d44b3ac77accc4b9706af86e33037bda6861/sales.sas7bdat
+seaslug,https://assets.datacamp.com/production/repositories/487/datasets/07cd090cb965782011a76af72c16b400a5ca5cc0/seaslug.txt
+temperatures_csv,https://assets.datacamp.com/production/repositories/5386/datasets/47f5fde162bae3549ca7d5c26fb4c4639f100f28/temperatures.csv
+titanic,https://assets.datacamp.com/production/repositories/487/datasets/be79810c4288801167cfb31dbedd396559816ade/titanic_sub.csv
+tweets,https://assets.datacamp.com/production/repositories/464/datasets/82e9842c09ad135584521e293091c2327251121d/tweets.csv
+walmart_sales_csv,https://assets.datacamp.com/production/repositories/5386/datasets/5110afec30fc30bc5f3cf67b188d1513c3d6d940/sales_subset.csv
+world_bank_dataset,https://assets.datacamp.com/production/repositories/464/datasets/2175fef4b3691db03449bbc7ddffb740319c1131/world_ind_pop_data.csv
+movies_p,https://assets.datacamp.com/production/repositories/5486/datasets/81f8f3290520b0a9bdc6d77deaac87a9d298de46/movies.p
+movie_actors_csv,https://assets.datacamp.com/production/repositories/5486/datasets/a0c0d3236b987b0d57538220173f76a0b4d55697/actors_movies.csv
+movie_ratings_p,https://assets.datacamp.com/production/repositories/5486/datasets/142036e646e9e9fa21bbae386df6cf65d71ace05/ratings.p
+movie_casts_p,https://assets.datacamp.com/production/repositories/5486/datasets/64dc93487604f68a9d51db160d888f3904c68da0/casts.p
+movie_crews_p,https://assets.datacamp.com/production/repositories/5486/datasets/ff485ad46337574df2e4c363b31fbfdc9713541d/crews.p
+movie_genres_p,https://assets.datacamp.com/production/repositories/5486/datasets/a2963ed7eaefdc5ca0ed74fb6520c7588d57bfd5/movie_to_genres.p
+movie_sequels_p,https://assets.datacamp.com/production/repositories/5486/datasets/4072d8a5a94dcf0a537bdcf01032bd0677ada85b/sequels.p

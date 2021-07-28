@@ -3,6 +3,7 @@ import os
 
 url_file = "C:/MANOJ/Academic/SelfStudy/Python/USF_Python/Sunbeam/dataset/url.csv"
 
+
 def list_datasets():
     # print(os.getcwd())
 
@@ -23,3 +24,11 @@ def get_url(dataset_name):
 def load_dataset(dataset_name):
     df = pd.read_csv(get_url(dataset_name), index_col=0)
     return df
+
+
+def sort_dataset_file():
+    dataset = pd.read_csv('dataset/url.csv', names=['name', 'url'])
+    dataset['url'] = dataset.url.str.strip()
+    dataset = dataset.sort_values(by='name')
+
+    dataset.to_csv('dataset/url.csv', index=False, header=False)
